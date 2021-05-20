@@ -1,0 +1,26 @@
+{
+  "name": "prefecture-rdv",
+  "version": "1.0.0",
+  "description": "Prendre un rdv with prefecture pour renouveller titre de sejour",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly ./index.ts",
+    "devfromlist": "ts-node-dev --respawn --transpileOnly ./fromlist/index.ts",
+    "prod": "tsc && node ./build/index.js"
+  },
+  "author": "Jiyun Yang",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "puppeteer": "^5.5.0",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.8",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^3.9.9",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^3.0.5"
+  }
+}

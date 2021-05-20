@@ -26,6 +26,7 @@ const launch = async function (page: Page) {
     try {
         await page.goto(startingUrl);
         await page.waitForSelector('input#condition');
+        
         page.click('input#condition');
         await sleep(100);
         page.click('input.Bbutton[name="nextButton"]');
@@ -51,8 +52,8 @@ const launch = async function (page: Page) {
         }
     } catch(e) {
         logger.log('error', `KO${e}`);
-        await page.screenshot({path: `err-${moment().format()}.png`});
-        setTimeout(() => launch(page), 60000);
+        await page.screenshot({ path: `err--${moment().format("YYYY-MM-DD--HH-mm")}.png` });
+        setTimeout(() => launch(page), 90000);
     }
 };
 
